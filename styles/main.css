@@ -1,0 +1,15 @@
+body {
+    background-color: aqua;
+}
+
+.special {
+    color: red;
+}
+.highlight {
+    background-color: yellow;
+}
+
+
+/* table {
+    border-collapse: 1px solid black;
+} */

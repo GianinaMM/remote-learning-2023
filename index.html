@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first Website</title>
+   
+</head>
+<body>
+
+
+<!--
+Request-clien -> server
+POST(metoda) http://google.com HTTP/1.1
+Content-Type: x-www-form-urlencoded
+Cookie:dada
+
+GET(metoda) http://google.com?firstNAme=Gianina HTTP/1.1
+Content-Type: x-www-form-urlencoded
+Cookie:dada
+
+firstName=Gianina&lastName-Morosan
+Methods/http verbs
+(put,patch,delete,post,option-se trimite automat de browser,head)
+
+Response (server-> client)
+http/1.1 200
+Content-Type: text/html
+SetCookie: dassjsje
+<html> 
+    ....
+</html>
+-->
+
+
+
+
+    <form action="chil/contact.html" method="post" enctype="multipart/form-data">
+        <h1>Form</h1>
+<input type="text" name="firstName" placeholder="Firt Name">
+
+<button type="submit" name="button" value="value button" >Trimite</button>
+<button type="button">Notmal button</button>
+<button type="reset">Reset</button>
+<input type="hidden" name="ascuns" value="o valoare oarecare">
+    </form>
+
+
+
+    <p>
+        <label for="password">Date</label>
+        <input type="password" id="password" name="password">
+        </label>
+    </p>
+
+    <p>
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date">
+        </label>
+    </p>
+
+    <p>
+        <label for="email">Date</label>
+        <input type="email" id="email" name="email" required>
+        </label>
+        <!--
+            se deschide tastatura cu @ sau .com,etc
+        -->
+    </p>
+
+    <p>
+        <label for="search">Date</label>
+        <input type="search" id="search" name="search">
+        </label>
+    </p>
+
+    <p>
+        <label for="phone">Date</label>
+        <input type="tel" id="phone" name="phone" pattern="[1-9]{3-5}">
+        </label>
+        <!--tastatura se deschide la numere-->
+    </p>
+
+    <p>
+        <label for="file">Date</label>
+        <input type="file" id="file" name="file" pattern="[1-9]{3-5}">
+        </label>
+    </p>
+
+    <p>
+        <span>Gender</span>
+        <label ><input type="radio" name="gender" value="F">Female</label>
+        <label ><input type="radio" name="gender" value="M">Male</label>
+        <label ><input type="radio" name="gender" value="F">Other</label>
+
+    </p>
+
+    <p>
+        <span>Favourite Colors</span>
+        <label ><input type="checkbox" name="color" value="red">Red</label>
+        <label ><input type="checkbox" name="color" value="green">Green</label>
+        <label ><input type="checkbox" name="color" value="blue">Blue</label>
+
+    </p>
+
+    <p>
+        <label for="gender2">Gender2</label>
+        <select name="gender2" id="gender2">
+<option value=""></option>
+<option value="F">Female</option>
+
+<option value="M">Male</option>
+
+<option value="O" selected>Other</option>
+
+<optgroup></optgroup>
+        </select>
+    </p>
+
+<p>
+    <label for="message">Message</label>
+    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+</p>
+
+<p>
+    <label for="autocomplet">Something</label>
+    <input type="text" id="autocomplet" name="birds" list="listaMea"/>
+    <datalist id="listaMea">
+<option value="cioara">Cioara</option>
+<option value="vrabie">Vrabie</option>
+<option value="cuc">Cuc</option>
+
+    </datalist>
+</p>
+
+
+
+<table border="1" cellspacing="5" cellpadding="10">
+    <thead>
+        <tr>
+<th scope="col">Person 1</th>
+<th scope="col">Person 2</th>
+<th scope="col">Person 3</th>
+
+
+
+
+        </tr>
+
+
+    </thead>
+
+
+
+    <tbody>
+        <th scope="row" rowspan="2">Marius</th>
+        <th scope="row">Ioan</th>
+        <th scope="row">Maria</th>
+        <tr>
+            <td colspan="2">c1</td>
+            <td>c2
+            </td>
+            <td>c3</td>
+        </tr>
+
+        <tr>
+            <td>c1</td>
+            <td>c2
+            </td>
+            <td>c3</td>
+        </tr>
+
+        <tr>
+            <td>c1</td>
+            <td>c2
+            </td>
+            <td>c3</td>
+        </tr>
+        
+        
+
+    </tbody>
+
+
+
+    <tfoot></tfoot>
+</table>
+
+<br/>
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+    <h1>Titlu</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, possimus.
+        <a href="contact.html" target="_blank">Google</a>
+    </p>
+    <menu>
+        <li>Elementul 1</li>
+        <li>Elementul 2</li>
+        <li>Elementul 3</li>
+        <li>Elementul 4</li>
+        <li>Elementul 5</li>
+    </menu>
+
+<table border="1" cellspacing="5" cellpadding="5">
+    <thead>
+        <tr>
+            <th></th>
+            <th scope="col">
+                Title for collum 1
+            </th>
+            <th scope="col">
+                Title for collum 2
+            </th>
+            <th scope="col">
+                Title for collum 3
+            </th>
+        </tr>
+    </thead>
+<tbady>
+    <tr>
+        <th>Titlu pe rand</th>
+        <td colspan="2">
+            Cell1
+        </td>
+       
+        <td>
+            Cell3
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">Titlu pe rand</th>
+        <td>
+            Cell4
+        </td>
+        <td>
+            Cell5
+        </td>
+        <td>
+            Cell6
+        </td>
+    </tr>
+</tbady>
+<tfoo>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+    </tr>
+</tfoo>
+</table>
+
+
+
+
+
+
+    <img src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_3x2.jpg"
+     alt="A cat" 
+     widh="200"
+    height="110">
+    <div></div>
+    <span></span>
+
+    <nav>
+        <menu>
+            <li>
+
+            </li>
+        </menu>
+    </nav>
+<main>
+<article></article>
+</main>
+
+    </body>
+</html>
