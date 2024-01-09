@@ -9,4 +9,50 @@ body {
     background-color: yellow;
 }
 
+/**
+Specificity
 
+
+
+E(element)-specificitate 1
+class . -specificitate 10
+id # -specificitate 100
+inline styles - specificitate 1000
+-se refera strict la partea de selector(el da specificitatea)
+-cand avem 2 elemente,avem specificitate 2
+-daca avem un id si doua elemente-102
+a-specificator extra,are specificitate 11
+:: pseudo elemente -specificitate 1
+> descendent direct sau copil
+-daca lasam spatiu,este descendent pe orice nivel in ierarhie
+- > copil direct
++ frate direct inainte precedent-cel mai din dreapta este cel la care se aplica stilurile
+~ orice frate inainte precedent 
+combinatorii nu conteaza la specificitate 
+: pseudo-clase-dam o stare unui element (hover,first-child) -specificitate 10
+[attr]-selectori de atribut-specifitate 10
+[href]-toate elementele cu href atribut
+[href^http]-toate elementele care sunt href si incep cu http(^ simbol pentru inceput)
+[http$=.com] toate elementele care se termina cu .com($ simbol pentru sfarsit)
+[http*=example] - contine inauntrul sau textul example
+[http~=example] -
+[href=http://google.com] =href care este exact http://google.com
+*/
+
+
+a[href^=http]::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../styles/assets/external.png);
+    background-size: contain;
+
+}
+
+
+
+:root { 
+    --primary-color: red;
+    --secondary-color: yellow;
+}
