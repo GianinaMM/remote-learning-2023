@@ -1,3 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Roboto, Verdana, Tahoma, sans-serif;
+}
+
+
+
+
 body {
     margin: 0;
 }
@@ -21,14 +32,54 @@ body {
         color: #efefef;
         text-decoration: none;
         padding: 0.5rem 0.5rem;
+        white-space: nowrap;
 
         &:hover {
             color:#bcbcbc;
             text-decoration: underline;
         }
+     
     }
+    & menu {
+        display: none;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background: black;
+        }
+
+& > li:hover menu {
+    display:initial;
+}
+
+& > li {
+    position: relative;
+}
+
+& a:has(+ menu)::after {
+    content: "";
+    display: inline-block;
+    margin-bottom: -5px;
+    border: 0.4rem solid transparent;
+    border-top-color: #efefef;
+    margin-left: 5px
+
+}
+
 }
 
 .push-right { 
     margin-left: auto;
+}
+
+
+.modal-backdrop {
+    position: fixed;
+    top: 50px;
+    background-color: rgba(0, 0 , 0 , 0.5);
+    height: 100vh;
+    width: 100%;
 }

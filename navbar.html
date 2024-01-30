@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/navbar.css">
 </head>
 <body>
@@ -13,11 +17,37 @@
         </a>
         <menu class="main-menu">
            <li><a href="#">Home</a></li>
-           <li><a href="#">Products</a></li>
+           <li><a href="#">Products</a>
+            <menu>
+                <li><a href="#1">Phones</a></li>
+                <li><a href="#2">Tablets</a></li>
+                <li><a href="#3">Laptops</a></li>
+
+            </menu>
+        
+        </li>
            <li><a href="#">About Us</a></li>
            <li class="push-right"><a href="#">Login</a></li>
            <li><a href="#">Register</a></li>
         </menu>
     </nav>
+
+    <div class="modal-backdrop">
+        <div class="modal">
+            <article>
+                <header>
+                    <h1>
+                        THis is my modal
+                    </h1>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, soluta.</p>
+
+                <footer>
+                    <button>Cancel</button>
+                    <button>Save</button>
+                </footer>
+        </article> 
+        </div>
+    </div>
 </body>
 </html>
