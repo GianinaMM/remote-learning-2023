@@ -1,3 +1,6 @@
+"use strict"
+
+
 console.log("hello");
 
 var name = "Paul";
@@ -200,4 +203,45 @@ const person = {
 
 
 console.clear();
-console.log(person.fName);
+// console.log(person.fName);
+
+/**
+ * This
+ * 1.is determinet at function invocation NOT function creation
+ * -is what is to the left of the dot user.function() => this === user
+ * -if "use strict" is on ,and there is nothing to the left of the dot,this is undefined
+ * -if "use strict" is not on,and is nothing to the left of the dot this === window
+ * -if using call() or apply() we can set this to whatever we want 
+ * 
+ * 2.is determined at the time of function creation
+ * -using bind() setam this to whatever we want
+ * -cand folosim arrow function ia variabila this din scopul curent 
+ * 
+ * 3.Constructor functions
+ */
+
+function myfunction () {
+    return this
+};
+
+myfunction();
+
+const dog = {
+    color: "brown",
+    yeaux: "brown",
+    bark: function (a, b) {
+        return this.color + " " + a + " " + b;
+}
+}
+// console.log(dog.bark());
+
+const dog2 = {
+    color: "red",
+    yeaux: "black",
+}
+
+console.log(dog.bark.call(dog2, "Rex", "Bishon"));
+// console.log(dog.bark.apply(dog2));
+console.log(dog.bark.bind(dog2));
+
+
