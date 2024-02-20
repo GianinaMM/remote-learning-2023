@@ -218,6 +218,7 @@ console.clear();
  * -cand folosim arrow function ia variabila this din scopul curent 
  * 
  * 3.Constructor functions
+ * -can use this inside de function if we call the function preceded bye the new keyword and it represents the instance 
  */
 
 function myfunction () {
@@ -243,5 +244,81 @@ const dog2 = {
 console.log(dog.bark.call(dog2, "Rex", "Bishon"));
 // console.log(dog.bark.apply(dog2));
 console.log(dog.bark.bind(dog2));
+
+
+const arrDummy = {
+    0: "Paul",
+    1: "Ceva",
+    2: 42
+};
+
+console.log(arr);
+
+
+const propName = "first-name"
+
+
+/**
+ * Constructor functions
+ * OOP in JS
+ * 
+ */
+
+
+function User(fName, lName, age, weight) {
+this.fName = fName;
+this.lName = lName;
+this.age = age;
+this.heigth = weight;
+}
+
+const user1 = new User("Gianina", "Popescu", 1.68, 59);
+
+class Admin extends User {
+    type = "admin";
+    constructor () {
+        super()
+        this.whatever = "test";
+    }
+
+    sayHello() {
+        return `Hello ${this.fName} ${this.lName}`;
+    }
+}
+
+const admin = new Admin("Diana", "Georgescu", 1.6, 60);
+
+
+/**Functions
+ * 
+ */
+
+//Function Declaration
+function test1(param) {
+    return "test1" + param;
+}
+
+console.log(test1("Paul"));
+
+//Function Expression
+//a) staighforword
+
+const test2 = function (param) {
+    resturn "test 2" + param
+};
+
+console.log(test2("Paul"));
+
+//b) IIfe
+
+(function(param) {
+    console.log("test3" + param)
+})("Paul")
+
+
+//c)arrow function
+const test4 = (param) => "test4" + param;
+
+console.log(test4("Paul"));
 
 
