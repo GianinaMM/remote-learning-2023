@@ -304,7 +304,7 @@ console.log(test1("Paul"));
 //a) staighforword
 
 const test2 = function (param) {
-    resturn "test 2" + param
+    return "test 2" + param
 };
 
 console.log(test2("Paul"));
@@ -313,7 +313,7 @@ console.log(test2("Paul"));
 
 (function(param) {
     console.log("test3" + param)
-})("Paul")
+})("Paul");
 
 
 //c)arrow function
@@ -322,3 +322,69 @@ const test4 = (param) => "test4" + param;
 console.log(test4("Paul"));
 
 
+//Callbacks
+
+//Rest/Default parameters
+
+//Spread operator
+
+//Destructuring Assignment
+
+
+function testArgs(a, b, c) {
+    console.log({a, b, c, arguments})
+}
+
+testArgs(1, 2, 3, 4, 5, 6);
+
+
+
+//Callback
+
+function doItPositive (a, b, cb) {
+ a = Math.abs(a); //valoarea absoluta
+ b = Math.abs(b);
+ return cb(a, b)
+}
+
+function add(a, b) {
+    return a + b;
+}
+
+console.log(doItPositive(-5, -8, add));
+
+
+//Closures
+
+function parent(a) {
+    const b = 2;
+    function child(c){
+        return a + b + c;
+    }
+    return child;
+}
+
+const ext1 = parent(3);
+
+const ext2 = parent(5);
+
+console.log(ext1(4), ext2(4));
+
+
+
+for ( let i = 0; i < 5; i++) {
+    setTimeout(() => console.log(i), 1000);
+}
+
+
+//Spread operator
+
+function testSpread (a, b, c) {
+    return a + b + c;
+}
+
+const values = [3, 5, 7];
+
+console.log(testSpread(values[0], values[1], values[2]));
+
+console.log(testSpread(...values));
